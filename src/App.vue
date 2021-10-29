@@ -1,8 +1,7 @@
 <template>
   <div>
     <div>
-    <router-link to="./home">Home</router-link>
-      <router-link to="./home">Home</router-link>
+    <router-link to="./components/Home.vue">Home</router-link>
     </div>
     <div>
       <router-link to="./components/Suppliers/Supplier">Consult </router-link>

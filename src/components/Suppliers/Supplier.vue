@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
 
     <h1>{{ name }}</h1>
 
@@ -15,7 +15,7 @@
         name: 'Supplier',
 
         props: [
-            "name"
+            "id", "name"
         ]
     }
 
@@ -24,7 +24,7 @@
 <style scoped>
 
 div {
-    background: rgb(255, 191, 139);
+    background: rgb(205, 250, 221);
 }
 
 h3 {
