@@ -1,5 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '..src/components/Home.vue'
+import Supplier from '..src/components/Suppliers/Supplier.vue'
+import SuppliersList from '..src/components/Suppliers/SuppliersList.vue'
+import SuppliersMap from '..src/components/Suppliers/SuppliersMap.vue'
+import Reseller from '..src/components/Resellers/Resellers.vue'
+import ResellersList from '..src/components/Resellers/ResellersList.vue'
+import ResellersMap from '..src/components/Resellers/ResellersMap.vue'
+import Customer from '..src/components/Customers/Customers.vue'
+import CustomersList from '..src/components/Customers/CustomersList.vue'
+import CustomersMap from '..src/components/Customers/CustomersMap.vue'
+import Order from '..src/components/Orders/Orders.vue'
+import OrdersList from '..src/components/Orders/OrdersList.vue'
 
 const router = createRouter({
     routes:[
@@ -25,35 +36,35 @@ const router = createRouter({
         },
         {
             path: '/Reseller',
-            component: Supplier
+            component: Reseller
         },
         {
             path: '/ResellersList',
-            component: SuppliersList
+            component: ResellersList
         },
         {
             path: '/ResellersMap',
-            component: SuppliersMap
+            component: ResellersMap
         },
         {
             path: '/Customer',
-            component: Supplier
+            component: Customer
         },
         {
             path: '/CustomersList',
-            component: SuppliersList
+            component: CustomersList
         },
         {
             path: '/CustomersMap',
-            component: SuppliersMap
+            component: CustomersMap
         },
         {
             path: '/Order',
-            component: Supplier
+            component: Order
         },
         {
             path: '/OrdersList',
-            component: SuppliersList
+            component: OrdersList
         }
     ],
     history: createWebHistory()
