@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="displaySupplier">
 
-    <h1>{{ name }}</h1>
+    <h2>{{ name }}</h2>
 
-    <h3>A stock ? {{ status }}</h3>
+    <h3 v-bind:class="[status ? 'isActive' : 'notActive']">Disponible en Stock ? {{ status }}</h3>
     <h5>
 		Date de dernière relevé des stocks : {{ date.toLocaleString() }}
 	</h5>
@@ -31,12 +31,22 @@
 
 <style scoped>
 
-div {
+.displaySupplier {
+    background: rgb(205, 250, 221);
+	
+}
+
+.notActive {
+	background: rgb(243, 96, 96);
+}
+
+.isActive {
     background: rgb(205, 250, 221);
 }
 
+
 h3 {
-  color: green;
+  color: rgb(20, 105, 62);
 }
 
 </style>
