@@ -12,7 +12,7 @@
         Loading......
       </h3>
 
-      <Supplier class="displaySupplier" v-else v-for="item in suppliers" :key="item.id" :name="item.name"/>
+      <Supplier class="displaySupplier" v-else v-for="item in suppliers" :key="item.id" :name="item.name" :date="item.checkedAt" :status="item.status"/>
       
     </section>
 

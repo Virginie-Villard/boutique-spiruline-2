@@ -1,24 +1,21 @@
 <template>
-  <div>
-    <div>
-    <router-link to="./components/Home.vue">Home</router-link>
-    </div>
-    <div>
-      <router-link to="./components/Suppliers/Supplier">Consult </router-link>
-      <button @click="onSupplierClick">Supplier</button>
-    </div>
-    <div>
-      <router-link to="./components/Suppliers/SuppliersList">Consult </router-link>
-      <button @click="onSuppliersListClick">Suppliers List</button>
-    </div>
-    <div>
-      <router-link to="./components/Suppliers/SuppliersMap">Consult </router-link>
-      <button @click="onMapClick">Suppliers map</button>
-    </div>
-    <!-- <SuppliersList />
-    <SuppliersMap /> -->
-    <router-view />
-  </div>
+	<div>
+		<div>
+			<router-link to="/">Home</router-link>
+		</div>
+		<!-- <div>
+			<router-link to="./components/Suppliers/Supplier">Supplier</router-link>
+		</div> -->
+		<div>
+			<router-link to="/suppliers">List </router-link>
+		</div>
+		<!-- <div>
+			<router-link to="./components/Suppliers/SuppliersMap">Map : </router-link>
+		</div> -->
+		
+		<router-view>
+		</router-view>
+	</div>
 </template>
 
 <script>

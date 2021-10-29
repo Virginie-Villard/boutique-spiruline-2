@@ -3,8 +3,10 @@
 
     <h1>{{ name }}</h1>
 
-    <!-- <h3>A stock ? {{ status }}</h3>
-    <h5>Date de dernière relevé des stocks : {{ checkedAt.toLocaleString() }}</h5> -->
+    <h3>A stock ? {{ status }}</h3>
+    <h5>
+		Date de dernière relevé des stocks : {{ date.toLocaleString() }}
+	</h5>
 
   </div>
 </template>
@@ -15,8 +17,14 @@
         name: 'Supplier',
 
         props: [
-            "id", "name"
-        ]
+            "id", "name", "date", "status"
+        ],
+    
+		computed: {
+			timeFormat() {
+				return format(this.date)
+			}
+		}
     }
 
 </script>

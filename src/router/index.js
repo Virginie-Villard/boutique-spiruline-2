@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../src/components/Home.vue'
-import Supplier from '../src/components/Suppliers/Supplier.vue'
-import SuppliersList from '../src/components/Suppliers/SuppliersList.vue'
-// import SuppliersMap from '../src/components/Suppliers/SuppliersMap.vue'
-// import Reseller from '../src/components/Resellers/Resellers.vue'
-// import ResellersList from '../src/components/Resellers/ResellersList.vue'
-// import ResellersMap from '../src/components/Resellers/ResellersMap.vue'
-// import Customer from '../src/components/Customers/Customers.vue'
-// import CustomersList from '../src/components/Customers/CustomersList.vue'
-// import CustomersMap from '../src/components/Customers/CustomersMap.vue'
-// import Order from '../src/components/Orders/Orders.vue'
-// import OrdersList from '../src/components/Orders/OrdersList.vue'
+import Home from '../components/Home.vue'
+// import Supplier from '../components/Suppliers/Supplier.vue'
+import SuppliersList from '../components/Suppliers/SuppliersList.vue'
+// import SuppliersMap from '../components/Suppliers/SuppliersMap.vue'
+// import Reseller from '../components/Resellers/Resellers.vue'
+// import ResellersList from '../components/Resellers/ResellersList.vue'
+// import ResellersMap from '../components/Resellers/ResellersMap.vue'
+// import Customer from '../components/Customers/Customers.vue'
+// import CustomersList from '../components/Customers/CustomersList.vue'
+// import CustomersMap from '../components/Customers/CustomersMap.vue'
+// import Order from '../components/Orders/Orders.vue'
+// import OrdersList from '../components/Orders/OrdersList.vue'
 
 const routes = [
     {
@@ -21,10 +21,10 @@ const routes = [
         path: '/',
         redirect: '/home'
     },
-    {
-        path: '/supplier',
-        component: Supplier
-    },
+    // {
+    //     path: '/supplier',
+    //     component: Supplier
+    // },
     {
         path: '/suppliers',
         component: SuppliersList
