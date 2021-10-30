@@ -33,11 +33,11 @@
 
 .displaySupplier {
     background: rgb(205, 250, 221);
-	
+
 }
 
 .notActive {
-	background: rgb(243, 96, 96);
+	background: rgba(226, 195, 146, 0.712);
 }
 
 .isActive {
@@ -45,8 +45,8 @@
 }
 
 
-h3 {
-  color: rgb(20, 105, 62);
+h3, h2 {
+  color: rgb(26, 80, 62);
 }
 
 </style>
