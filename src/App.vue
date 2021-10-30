@@ -1,5 +1,6 @@
 <template>
-	<div>
+
+	<nav>
 		<div>
 			<router-link to="/">Home</router-link>
 		</div>
@@ -12,10 +13,14 @@
 		<!-- <div>
 			<router-link to="./components/Suppliers/SuppliersMap">Map : </router-link>
 		</div> -->
+
+	</nav>
+
+	<img src="./assets/spiruline.jpg" alt="Image de spiruline." />
+	
+	<router-view>
+	</router-view>
 		
-		<router-view>
-		</router-view>
-	</div>
 </template>
 
 <script>
@@ -50,5 +55,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+	Color: rgb(26, 80, 62);
+}
+
+nav {
+	background-color: rgb(26, 80, 62);
 }
 </style>
