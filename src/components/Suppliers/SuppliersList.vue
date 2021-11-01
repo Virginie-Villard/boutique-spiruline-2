@@ -16,9 +16,9 @@
             </h3>
 
             <Supplier class="displaySupplier"
-            
-            v-else v-for="item in suppliers" 
-                :key="item.id" :name="item.name" :date="item.checkedAt" :status="item.status ?'Yes' : 'No'"/>
+
+            v-else v-for="item in suppliers"
+                :key="item.id" :name="item.name" :date="item.checkedAt" :status="item.status"/>
 
         </section>
 
@@ -40,7 +40,7 @@ export default {
 
 
     },
- 
+
 //   filters: {
 //     currencydecimal (value) {
 //       return value.toFixed(2)
@@ -48,11 +48,11 @@ export default {
 //   },
 
     components: { Supplier },
-  
+
     mounted () {
         axios
         .get('https://heroku-campus-suppliers.herokuapp.com/api/suppliers')
-      
+
         .then(response => {
             this.suppliers = response.data.data
             console.log(response)
@@ -63,7 +63,7 @@ export default {
             this.errored = true
         })
 
-        .finally(() => this.loading = false)      
+        .finally(() => this.loading = false)
     }
 }
 

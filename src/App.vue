@@ -2,13 +2,13 @@
 
 	<nav>
 		<div class="navbar">
-			<router-link to="/">Home</router-link>
+			<router-link class="nav-item" to="/">Home</router-link>
 		</div>
 		<!-- <div class="navbar">
 			<router-link to="./components/Suppliers/Supplier">Supplier</router-link>
 		</div> -->
 		<div class="navbar">
-			<router-link to="/suppliers">List </router-link>
+			<router-link class="nav-item" to="/suppliers">List </router-link>
 		</div>
 		<!-- <div class="navbar">
 			<router-link to="./components/Suppliers/SuppliersMap">Map : </router-link>
@@ -17,10 +17,10 @@
 	</nav>
 
 	<img src="./assets/spiruline.jpg" alt="Image de spiruline." />
-	
+
 	<router-view>
 	</router-view>
-		
+
 </template>
 
 <script>
@@ -65,7 +65,6 @@ img {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1 {
@@ -74,54 +73,32 @@ h1 {
 
 nav {
 	background-color: rgb(26, 80, 62);
-  Padding: 2%;
-  margin-top: -6.8%;
   width: 100%;
-  height: auto;
+  height: 70px;
   font-size: 30px;
   display: flex;
   position: fixed;
 }
 
 .navbar {
-  padding: 0 4%; 
-  padding-top: 1%;
   /* todo color white */
   display: inline-block;
   justify-content: space-around;
   text-align: baseline;
 }
 
-.navbar:visited {
+.nav-item:visited {
   color:rgb(205, 250, 221);
 }
 
-.navbar:hover {
+.nav-item:hover {
   color:rgb(205, 250, 221);
   font-size: 30px;
 }
 
-@media (max-width: 700px) {
-  nav { 
-    display: block;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 922px) {
-  nav {
-    margin-top: -10%;
-    display: block;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  nav {
-    margin-top: -15%;
-    display: block;
-    flex-direction: column;
-  }
+.nav-item {
+  padding: 20px;
+  color: white;
 }
 
 </style>

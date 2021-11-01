@@ -3,7 +3,7 @@
 
     <h2>{{ name }}</h2>
 
-    <h3 v-bind:class="[status ? 'isActive' : 'notActive']">Available in stock? {{ status }}</h3>
+    <h3 v-bind:class="[status ? 'isActive' : 'notActive']">Available in stock? {{ status ? "Yes" :  "No" }}</h3>
     <h5>
 		Date of last stocktaking : {{ date.toLocaleString() }}
 	</h5>
@@ -19,7 +19,7 @@
         props: [
             "id", "name", "date", "status"
         ],
-    
+
 		computed: {
 			timeFormat() {
 				return format(this.date)
@@ -32,7 +32,7 @@
 			// 		return moment(String(date)).format('MM/DD/YYYY hh:mm')
 			// 	}
 			// }
-		}	
+		}
 	}
 
 </script>
