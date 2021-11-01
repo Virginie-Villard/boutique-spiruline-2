@@ -3,9 +3,9 @@
 
     <h2>{{ name }}</h2>
 
-    <h3 v-bind:class="[status ? 'isActive' : 'notActive']">Disponible en Stock ? {{ status }}</h3>
+    <h3 v-bind:class="[status ? 'isActive' : 'notActive']">Available in stock? {{ status }}</h3>
     <h5>
-		Date de dernière relevé des stocks : {{ date.toLocaleString() }}
+		Date of last stocktaking : {{ date.toLocaleString() }}
 	</h5>
 
   </div>
@@ -23,9 +23,17 @@
 		computed: {
 			timeFormat() {
 				return format(this.date)
-			}
-		}
-    }
+			},
+
+			// @see : https://www.codegrepper.com/code-examples/javascript/vue+3+common+method+format+date
+			// @see : https://help.talend.com/r/f7_Igxda4W5myTdc5yN2xw/OdzUMuVkKkL4x~h6zp36~A
+			// Vue.filter('formatDate', function(date) {
+			// 	if (date) {
+			// 		return moment(String(date)).format('MM/DD/YYYY hh:mm')
+			// 	}
+			// }
+		}	
+	}
 
 </script>
 

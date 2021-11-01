@@ -8,6 +8,10 @@
     <p>
         Cultivated worldwide, Arthrospira is used as a dietary supplement or whole food. It is also used as a feed supplement in the aquaculture, aquarium, and poultry industries.
     </p>
+
+    <p class="credits">
+      Definition from Wikipedia ( https://en.wikipedia.org/wiki/Spirulina_(dietary_supplement) ), Picture from TheraScience Laboratory ( https://www.therascience.com/en_fr/our-assets/algues/spiruline )
+    </p>
   </div>
 </template>
 
@@ -17,4 +21,16 @@ export default {
   name: 'Home',
 }
 </script>
+
+<style>
+
+p {
+  margin: 5% 20%;
+}
+
+.credits {
+  font-size: 10px;
+}
+
+</style>
 

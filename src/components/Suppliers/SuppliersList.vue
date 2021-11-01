@@ -1,5 +1,8 @@
 <template>
-    <div>
+
+    <h1>List of suppliers :</h1>
+
+    <div class="container">
 
         <section class="displayError" v-if="errored">
             <h3>
@@ -7,7 +10,7 @@
             </h3>
         </section>
 
-        <section v-else>
+        <section class="displaySupplierBox" v-else>
             <h3 class="displayLoading" v-if="loading">
                 Loading......
             </h3>
@@ -15,7 +18,7 @@
             <Supplier class="displaySupplier"
             
             v-else v-for="item in suppliers" 
-                :key="item.id" :name="item.name" :date="item.checkedAt" :status="item.status"/>
+                :key="item.id" :name="item.name" :date="item.checkedAt" :status="item.status ?'Yes' : 'No'"/>
 
         </section>
 
@@ -70,7 +73,7 @@ export default {
 <style scoped>
 
 h3 {
-    margin: 40px;
+    margin: 40px auto 10px;
 }
 
 .displayError {
@@ -83,6 +86,28 @@ h3 {
 
 .displayCity {
     margin: 20px;
+}
+
+.container {
+    display: grid;
+    padding: 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-gap: 5%;
+}
+
+.displaySupplier {
+    margin: 5%;
+    padding: 5%;
+
+}
+
+@media (min-width: 600px) {
+  .displaySupplierBox { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .displaySupplierBox { grid-template-columns: repeat(3, 1fr); }
 }
 
 </style>
