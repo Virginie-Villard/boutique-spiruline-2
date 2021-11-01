@@ -5,13 +5,15 @@
 
     <h3 v-bind:class="[status ? 'isActive' : 'notActive']">Available in stock? {{ status ? "Yes" :  "No" }}</h3>
     <h5>
-		Date of last stocktaking : {{ date.toLocaleString() }}
+		Date of last stocktaking : {{ timeFormat }}
 	</h5>
 
   </div>
 </template>
 
 <script>
+
+    import { format } from 'timeago.js';
 
     export default {
         name: 'Supplier',
@@ -23,15 +25,7 @@
 		computed: {
 			timeFormat() {
 				return format(this.date)
-			},
-
-			// @see : https://www.codegrepper.com/code-examples/javascript/vue+3+common+method+format+date
-			// @see : https://help.talend.com/r/f7_Igxda4W5myTdc5yN2xw/OdzUMuVkKkL4x~h6zp36~A
-			// Vue.filter('formatDate', function(date) {
-			// 	if (date) {
-			// 		return moment(String(date)).format('MM/DD/YYYY hh:mm')
-			// 	}
-			// }
+			}
 		}
 	}
 

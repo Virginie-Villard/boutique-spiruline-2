@@ -8,7 +8,7 @@
 			<router-link to="./components/Suppliers/Supplier">Supplier</router-link>
 		</div> -->
 		<div class="navbar">
-			<router-link class="nav-item" to="/suppliers">List </router-link>
+			<router-link class="nav-item" to="/suppliers">Suppliers List </router-link>
 		</div>
 		<!-- <div class="navbar">
 			<router-link to="./components/Suppliers/SuppliersMap">Map : </router-link>
@@ -84,7 +84,7 @@ nav {
   /* todo color white */
   display: inline-block;
   justify-content: space-around;
-  text-align: baseline;
+  align-items:center;
 }
 
 .nav-item:visited {
@@ -97,8 +97,9 @@ nav {
 }
 
 .nav-item {
-  padding: 20px;
   color: white;
+    line-height: 70px;
+    margin: 0 20px;
 }
 
 </style>
