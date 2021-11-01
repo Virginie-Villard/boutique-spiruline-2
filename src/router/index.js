@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../components/Home.vue'
 // import Supplier from '../components/Suppliers/Supplier.vue'
 import SuppliersList from '../components/Suppliers/SuppliersList.vue'
-// import SuppliersMap from '../components/Suppliers/SuppliersMap.vue'
+import SuppliersMap from '../components/Suppliers/SuppliersMap.vue'
 // import Reseller from '../components/Resellers/Resellers.vue'
 // import ResellersList from '../components/Resellers/ResellersList.vue'
 // import ResellersMap from '../components/Resellers/ResellersMap.vue'
@@ -28,33 +28,33 @@ const routes = [
     {
         path: '/suppliers',
         component: SuppliersList
-    }//,
-    // {
-    //     path: '/SuppliersMap',
-    //     component: SuppliersMap
-    // },
+    },
+    {
+        path: '/suppliers-map',
+        component: SuppliersMap
+    }// ,
     // {
     //     path: '/Reseller',
     //     component: Reseller
     // },
     // {
-    //     path: '/ResellersList',
+    //     path: '/resellers',
     //     component: ResellersList
     // },
     // {
-    //     path: '/ResellersMap',
+    //     path: '/resellers-map',
     //     component: ResellersMap
     // },
     // {
-    //     path: '/Customer',
+    //     path: '/customer',
     //     component: Customer
     // },
     // {
-    //     path: '/CustomersList',
+    //     path: '/customers',
     //     component: CustomersList
     // },
     // {
-    //     path: '/CustomersMap',
+    //     path: '/customers-map',
     //     component: CustomersMap
     // },
     // {

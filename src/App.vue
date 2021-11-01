@@ -4,15 +4,15 @@
 		<div class="navbar">
 			<router-link class="nav-item" to="/">Home</router-link>
 		</div>
-		<!-- <div class="navbar">
-			<router-link to="./components/Suppliers/Supplier">Supplier</router-link>
+<!--        <div class="navbar">
+            <router-link to="./components/Suppliers/Supplier">Supplier</router-link>
 		</div> -->
 		<div class="navbar">
 			<router-link class="nav-item" to="/suppliers">Suppliers List</router-link>
 		</div>
-		<!-- <div class="navbar">
-			<router-link to="./components/Suppliers/SuppliersMap">Map : </router-link>
-		</div> -->
+		 <div class="navbar">
+			<router-link class="nav-item" to="/suppliers-map">Suppliers Map</router-link>
+		</div>
 
 	</nav>
 
