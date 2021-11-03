@@ -1,42 +1,53 @@
 <template>
     <h1>Suppliers Map :</h1>
-  <l-map style="height:50vh">
-    <l-geo-json :geojson="geojson" :options="geojsonOptions" />
-  </l-map>
+
+    <div id="map"></div>
+
 </template>
 
 <script>
 // DON'T load Leaflet components here!
 // Its CSS is needed though, if not imported elsewhere in your application.
-import "leaflet/dist/leaflet.css"
-import { LMap, LGeoJson } from "@vue-leaflet/vue-leaflet";
+
+import leaflet from "leaflet";
+import { onMounted } from "@vue/runtime-core";
 
 export default {
-  components: {
-    LMap,
-    LGeoJson,
-  },
-  data() {
-    return {
-      geojson: {
-        type: "FeatureCollection",
-        features: [
-          // ...
-        ],
-      },
-      geojsonOptions: {
-        // Options that don't rely on Leaflet methods.
-      },
-    };
-  },
-  async beforeMount() {
-    // HERE is where to load Leaflet components!
-    const { circleMarker } = await import("leaflet/dist/leaflet-src.esm");
+    name: "SuppliersMap",
 
-    // And now the Leaflet circleMarker function can be used by the options:
-    this.geojsonOptions.pointToLayer = (feature, latLng) =>
-        circleMarker(latLng, { radius: 8 });
-    this.mapIsReady = true;
-  },
+    setup() {
+        let mymap;
+
+        onMounted(() => {
+            mymap = leaflet.map('map').setView([51.505, -0.09], 13);
+
+            leaflet.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmlyZ2lueSIsImEiOiJja3ZpMzd0ZWowMW9sMndudmNybnpkd3FoIn0.8jmpbCKzbnv3hdAvMuyaLQ', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'pk.eyJ1IjoidmlyZ2lueSIsImEiOiJja3ZpMzd0ZWowMW9sMndudmNybnpkd3FoIn0.8jmpbCKzbnv3hdAvMuyaLQ'
+            }).addTo(mymap);
+        })
+
+    }//,
+  // async beforeMount() {
+  //   // HERE is where to load Leaflet components!
+  //   const { circleMarker } = await import("leaflet/dist/leaflet-src.esm");
+  //
+  //   // And now the Leaflet circleMarker function can be used by the options:
+  //   this.geojsonOptions.pointToLayer = (feature, latLng) =>
+  //       circleMarker(latLng, { radius: 8 });
+  //   this.mapIsReady = true;
+  // },
 };
 </script>
+
+<style>
+
+#map {
+    height: 100vh;
+}
+
+</style>

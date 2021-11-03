@@ -89,11 +89,9 @@ h3 {
 }
 
 .container {
-    display: grid;
     padding: 5%;
     max-width: 1200px;
     margin: 0 auto;
-    grid-gap: 5%;
 }
 
 .displaySupplier {
